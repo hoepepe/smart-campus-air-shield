@@ -131,15 +131,7 @@ function navigate(id) {
   if (id === 'about'    && !window._aboutInited)  { initAbout();   window._aboutInited = true; }
   if (id === 'sensors'  && !window._sensorsInited){ initSensors(); window._sensorsInited = true; }
 }
-function bindNavLinks() {
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const screen = link.dataset.screen;
-      if (screen) navigate(screen);
-    });
-  });
-}
+
 /* ── 4. DASHBOARD ── */
 function initDashboard() {
   renderHeroCards();
@@ -760,13 +752,11 @@ function updateClock() {
 }
 
 /* ── INIT ── */
-document.addEventListener('DOMContentLoaded', () => {
-  bindNavLinks();
-  updateClock();
-  setInterval(updateClock, 1000);
-  setInterval(() => { refreshData(); }, 15000); // auto-refresh mỗi 15s
-  initDashboard();
-});
+updateClock();
+setInterval(updateClock, 1000);
+setInterval(() => { refreshData(); }, 15000); // auto-refresh mỗi 15s
+
+initDashboard();
 
 /* ── API INTEGRATION GUIDE (comment) ──
    Khi ESP32 gửi data thật, thay refreshData() bằng:

@@ -6,7 +6,7 @@
 <title>Smart Campus Air Shield – ULIS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css?v=2"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 <div id="app">
@@ -28,28 +28,28 @@
     </div>
 
     <nav class="nav-links">
-      <a class="nav-link active" data-screen="dashboard" href="#">
+      <a class="nav-link active" data-screen="dashboard" onclick="navigate('dashboard')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
         Dashboard
       </a>
-      <a class="nav-link" data-screen="sensors" href="#">
+      <a class="nav-link" data-screen="sensors" onclick="navigate('sensors')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49"/><path d="M7.76 7.76a6 6 0 0 0 0 8.49"/></svg>
         Cảm biến
       </a>
-      <a class="nav-link" data-screen="history" href="#">
+      <a class="nav-link" data-screen="history">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         Lịch sử
       </a>
-      <a class="nav-link" data-screen="ai" href="#">
+      <a class="nav-link" data-screen="ai">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 12l8.5-8.5"/><path d="M16 2h6v6"/></svg>
         AI Dự báo
       </a>
-      <a class="nav-link" data-screen="alerts" href="#">
+      <a class="nav-link" data-screen="alerts" onclick="navigate('alerts')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
         Cảnh báo
         <span class="nav-badge" id="alert-count">2</span>
       </a>
-      <a class="nav-link" data-screen="about" href="#">
+      <a class="nav-link" data-screen="about" onclick="navigate('about')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         Dự án
       </a>
@@ -241,6 +241,6 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script src="app.js?v=2"></script>
+<script src="app.js"></script>
 </body>
 </html>
